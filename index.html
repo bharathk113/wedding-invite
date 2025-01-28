@@ -324,47 +324,73 @@
     </main>
 
     <!-- Welcome Page -->
-    <div class="loading-page bg-black" id="welcome" style="opacity: 1; background-image: url('./assets/images/navratri-decoration-with-candles.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
-            <div class="text-center">
-                <h2 class="font-esthetic mb-4 flicker-text" style="font-size: 3.5rem;">
-                    Wedding Invitation<br> of
-                </h2>
-                <div class="img-crop border border-3 border-light shadow mb-4 mx-auto">
-                    <img src="./assets/images/centre.png" alt="background">
-                </div>
-                <h2 class="font-esthetic my-4 flicker-text" style="font-size: 3.5rem;">
-                    Dharani &amp; Bharath
-                </h2>
-                <button type="button" class="btn btn-light shadow rounded-4 mt-4" onclick="guest.open(this)">
-                    <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
-                </button>
+<div class="loading-page bg-black" id="welcome" style="opacity: 1; background-image: url('./assets/images/navratri-decoration-with-candles.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center p-3">
+            <h2 class="font-esthetic mb-4 flicker-text display-4 display-md-3">
+                Wedding Invitation<br> of
+            </h2>
+            <div class="img-crop border border-3 border-light shadow mb-4 mx-auto">
+                <img src="./assets/images/centre.png" alt="background" class="img-fluid">
             </div>
+            <h2 class="font-esthetic my-4 flicker-text display-4 display-md-3">
+                Dharani &amp; Bharath
+            </h2>
+            <button type="button" class="btn btn-light shadow rounded-4 mt-4" onclick="guest.open(this)">
+                <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
+            </button>
         </div>
     </div>
+</div>
 
-    <style>
-        /* Flicker Effect */
-        @keyframes flicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-                opacity: 1;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b, 0 0 75px #ff6b6b;
-            }
-            20%, 24%, 55% {
-                opacity: 0.8;
-                text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #ff6b6b, 0 0 12px #ff6b6b, 0 0 16px #ff6b6b, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
-            }
-            22%, 53% {
-                opacity: 0.6;
-                text-shadow: 0 0 1px #fff, 0 0 2px #ff6b6b, 0 0 4px #ff6b6b, 0 0 6px #ff6b6b, 0 0 8px #ff6b6b, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b;
-            }
+<style>
+    /* Flicker Effect */
+    @keyframes flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            opacity: 1;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b, 0 0 50px #ff6b6b, 0 0 75px #ff6b6b;
         }
+        20%, 24%, 55% {
+            opacity: 0.8;
+            text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #ff6b6b, 0 0 12px #ff6b6b, 0 0 16px #ff6b6b, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+        }
+        22%, 53% {
+            opacity: 0.6;
+            text-shadow: 0 0 1px #fff, 0 0 2px #ff6b6b, 0 0 4px #ff6b6b, 0 0 6px #ff6b6b, 0 0 8px #ff6b6b, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b;
+        }
+    }
 
-        .flicker-text {
-            color: #fff;
-            animation: flicker 0.5s infinite alternate;
+    .flicker-text {
+        color: #fff;
+        animation: flicker 0.5s infinite alternate;
+    }
+
+    /* Responsive Styles */
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .display-md-3 {
+        font-size: 3.5rem;
+    }
+    .img-crop img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 576px) {
+        .display-4 {
+            font-size: 2rem;
         }
-    </style>
+        .display-md-3 {
+            font-size: 2.5rem;
+        }
+        .btn {
+            font-size: 0.9rem;
+            padding: 0.6rem 1rem;
+        }
+    }
+</style>
+
 
 
     <!-- Theme Button -->
